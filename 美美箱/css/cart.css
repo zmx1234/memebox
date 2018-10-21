@@ -1,0 +1,63 @@
+*{margin: 0;padding: 0;}
+a{text-decoration: none;color: white;}
+li{list-style: none;}
+img{display: block;}
+
+.title_01{height: 42px;background: #ff5073;}
+.title{width: 1100px; height: 42px; color:white;line-height: 42px;margin: 0 auto;}
+.title span{margin: 0 10px;}
+.title .img{float: left;margin-top:10px ;}
+.sign{margin-left:10px;font-size: 12px;float:left;}
+.sign-left{float: left;font-size: 12px;margin-left: 520px;}
+.sign-right{float: right;font-size: 12px;}
+.sign-right i{margin: 10px 2px 0 0;}
+
+.search_01{height: 110px;}
+.search{width:1100px;height: 110px;line-height: 110px;margin: 0 auto;}
+.search .img8{float: left;margin-top: 40px;}
+.sumCart{width:300px;height: 80px;float: right;margin-right: -160px;}
+.sumCart li{float: left;width: 100px; height: 60px;text-align: center;}
+.sumCart li span{width: 22px;height: 22px;background: #FF5073;color: white;border-radius: 50%;}
+.sumCart li div{margin-top: -85px;font-size: 14px;color: #FF5073;}
+
+
+.list{margin: 0 auto;width: 1100px;}
+.info{width: 1100px;height: 50px;background: #FFFDEF;border: 1px solid #F2F2F2;}
+.img_money{width: 1100px;height: 100px;border: 1px solid #F2F2F2;margin: 0 auto;}
+.img_money img{width: 80px;height: 80px;float: left;}
+.img_money p{float: left;margin: 10px 20px;}
+.img_money .sum p{color: red;}
+.img_money span{display: inline-block;width: 30px;height: 30px;border: 1px solid #d1d1d1;line-height: 30px;cursor: pointer;margin-left: 5px;}
+#sum{width: 1100px;margin: 20px auto;text-align: right;height: 50px;}
+#sum .fl{margin-left: 28px;float: left;}
+.money2{color: red;font-size: 30px;}
+.money3{width: 150px;height: 50px;background: #FF5073;display: inline-block;text-align: center;line-height: 50px;color: white;}
+
+.dd{background: #f3f1f2;;height: 240px;overflow: hidden;}
+.zp{height: 240px;width:1100px;margin: 0 auto;overflow: hidden;}
+.zp dl{float: left;margin-top: 50px;width:275px;text-align: center;}
+.zp dt img{width: 88px; height: 88px;margin-left: 92px;}
+.zp dd{font-size: 25px; font-weight: 600;margin-top: 10px;}
+
+.ba{height: 400px;}
+.base{width:1104px;height: 400px;margin: 0 auto;overflow: hidden;}
+.ba .base .qq{width: 245px;height: 180px;margin-top:120px ;padding-top: 30px;float: left;}
+.qq h4{font-size: 16px;text-align: center;margin-top:100px;}
+.qq p{margin-left: 55px;}
+.qq img{float: left;margin: 10px 5px;}
+.txt{width: 804px;height:400px;float: right; }
+.txt ul{margin-top:45px;width: 200px;border-left: 1px solid #eaeaea;float: left;text-align: center;}
+.txt h4{font-size: 20px;margin-bottom: 15px;}
+.txt li{font-size: 16px;line-height: 45px;color: #333333;}
+
+.phone_01{height: 100px;border-bottom: 2px solid #eaeaea;border-top: 2px solid #eaeaea;}
+.phone{height: 100px;text-align: center;width: 1100px;margin: 0 auto;}
+.phone h4{font-size: 18px;margin-top: 15px;}
+.phone p{font-size: 18px;margin-top: 15px;}
+
+.tal_01{height:60px;}
+.tal{height:60px ;font-size: 14px;text-align: center;width: 1100px;margin: 0 auto;}
+.tal span img{float: left;margin-left: 80px;}
+.tal p{margin-top: 15px;}
+.tal span{color: #aaaaaa;}
+.tal span:nth-of-type(1){float: left;}

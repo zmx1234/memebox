@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+	</head>
+	<body>
+		<div class="search_01">
+			<div class="search">
+				<p><a href="index.html"><img src="img/8.png" class="img8"/></a></p>
+			</div>
+		</div>
+		<div class="back">
+			<img src="img/PC_.jpg" />
+		</div>
+		<div class="register">
+			<form>
+				<p class="p2">注册MEMEBOX账号<a href="entry.html">立即登陆>></a></p>
+				<p><input type="text" placeholder="请输入有效手机号码" id="tet"/></p>
+				<span id="sp1"></span>
+				<p><input type="password" placeholder="请输入6~16位密码" id="pass"/></p>
+				<span id="sp2"></span>
+				<p><input type="text" placeholder="请输入验证码" class="text" id="text"/><input type="button" class="sp" value="发送验证码" id="sp"/></p>
+				<span id="sp3"></span>
+				<span id="sp4"></span>
+				
+				<p class="p3"><input type="button" value="注册" class="sub" id="sub"/></p>
+				<p class="p1">注册及表示您已同意<span>美美箱用户协议</span></p>
+			</form>
+			<div class="b1">
+				<p><span>第三方账号登录：</span>
+				<img src="img/12.png" width="25px" height="25px" />
+				<img src="img/10.png" width="25px" height="25px"/>
+				<img src="img/000.jpg" width="25px" height="25px"/>
+				</p>
+			</div>
+		</div>
+		<div class="dd">
+			<div class="zp">
+				<dl>
+					<dt><img src="img/4.png"/></dt>
+					<dd>100%正品</dd>
+				</dl>
+				<dl>
+					<dt><img src="img/6.png"/></dt>
+					<dd>优质低价</dd>
+				</dl>
+				<dl>
+					<dt><img src="img/1.png"/></dt>
+					<dd>极速发货</dd>
+				</dl>
+				<dl class="dl">
+					<dt><img src="img/9.png"/></dt>
+					<dd>退换无忧</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="ba">
+			<div class="base">
+				<div class="qq">
+					<h4>关于我们</h4>
+					<p>
+						<img src="img/7.png" />
+						<img src="img/12.png" />
+						<img src="img/10.png" />
+					</p>
+				</div>
+				<div class="txt">
+					<ul>
+						<h4>关于美美箱</h4>
+						<li>美美全球</li>
+						<li>品牌优势</li>
+						<li>消费保障</li>
+					</ul>
+					<ul>
+						<h4>帮助中心</h4>
+						<li>常见问题</li>
+						<li>账户相关</li>
+						<li>包邮政策</li>
+						<li>支付相关</li>
+						<li>物流相关</li>
+						<li>退换政策</li>
+					</ul>
+					<ul>
+						<h4>服务协议</h4>
+						<li>服务协议</li>
+						<li>个人网申协议</li>
+						<li>隐私协议</li>
+					</ul>
+					<ul>
+						<h4>联系我们</h4>
+						<li>商务合作</li>
+						<li>分销合作</li>
+						<li>加入我们</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="phone_01">
+			<div class="phone">
+				<h4>联系客服</h4>
+				<p>客服时间 : 周一~周五(9:00 - 21:00) &nbsp;&nbsp;&nbsp;客服热线: 400-720-9967 &nbsp;&nbsp;&nbsp;客服邮箱 :kf@memeboxglobal.com</p>
+			</div>
+		</div>
+		<div class="tal_01">
+			<div class="tal">
+				<p><span>© 2015 Memebox Corporation. All Rights Reserved.</span> <span><img src="img/0 (1).gif" width="40px" height="40px"/> 蜜米柏克思（上海）商贸有限公司 上海市杨浦区政立路415号中航天盛广场A座6楼 沪ICP备14043341号</span> 营业执照</p>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.11.3.js"></script>
+	<!--<script src="js/cookie.js"></script>--> 
+	<script >
+		$('.sub').click(function(){
+			var uname=$('#tet').val();
+			var upwd=$('#pass').val();
+			var now=new Date();
+			now.setDate(now.getDate()+3000);
+			document.cookie="name="+uname+";expires="+now+";path=/";
+			document.cookie="pwd="+upwd+";expires="+now+";path=/";
+			location.href="entry.html";
+			if(flagNume && flagPwd && flagAuth){
+				alert("注册成功");
+				return true;
+			}else{
+				alert("注册失败")
+				return false;
+			}
+		})
+		var flagNume=null;
+		$('#tet').blur(function(){
+			var reg=/^1\d{10}$/;
+			var uname=$(this).val();
+			if(reg.test(uname)){
+				$('#sp1').html("正确");
+				flagNume=true;
+			}else{
+				$('#sp1').html("请输入有效手机号");
+				flagNume=false;
+			}
+		})
+		var flagPwd=null;
+		$('#pass').blur(function(){
+			var reg=/^.{6,16}$/;
+			var upwd=$(this).val();
+			if(reg.test(upwd)){
+				$('#sp2').html("正确");
+				flagPwd=true;
+			}else{
+				$('#sp2').html("请输入6~16位密码");
+				flagPwd=false;
+			}
+		})
+		var flagAuth=null;
+		$('.sp').click(function(){
+			$('#sp4').html(ma());
+			$('#text').blur(function(){
+				var auth=$('#text').val();
+				if(auth==$('#sp4').html()){
+					$('#sp3').html("正确");
+					flagAuth=true;
+				}else{
+					$('#sp3').html("验证码错误");
+					flagAuth=false;
+				}
+			})
+		})
+		function ma(){
+			var str="0123456789";
+			var arr="";
+			for(var i=0;i<6;i++){
+				arr+=str.charAt(rand(0,9))
+			}
+			return arr;
+		}
+		function rand(min,max){
+			return Math.round(Math.random()*(max-min)+min);
+		}
+	</script>
+</html>

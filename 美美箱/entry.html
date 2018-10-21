@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/entry.css"/>
+	</head>
+	<body>
+			<div class="search_01">
+			<div class="search">
+				<p><a href="index.html"><img src="img/8.png" class="img8"/></a></p>
+			</div>
+		</div>
+		<div class="back">
+			<img src="img/PC_.jpg" />
+		</div>
+		<div class="register">
+			<form>
+				<p class="pp">登录MEMEBOX账号<a href="register.html">立即免费注册>></a></p>
+				<p><input type="text" placeholder="请输入账号" id="tet"/></p>
+				<span id="sp1"></span>
+				<p><input type="password" placeholder="请输入密码" id="pass"/></p>
+				<span id="sp2"></span>
+				<p><input type="button" value="登录" class="sub"/></p>
+				<p class="p1">忘记密码？</p>
+			</form>
+			<div class="b1">
+				<p><span>第三方账号登录：</span>
+				<img src="img/12.png" width="25px" height="25px" />
+				<img src="img/10.png" width="25px" height="25px"/>
+				<img src="img/000.jpg" width="25px" height="25px"/>
+				</p>
+			</div>
+		</div>
+		<div class="dd">
+			<div class="zp">
+				<dl>
+					<dt><img src="img/4.png"/></dt>
+					<dd>100%正品</dd>
+				</dl>
+				<dl>
+					<dt><img src="img/6.png"/></dt>
+					<dd>优质低价</dd>
+				</dl>
+				<dl>
+					<dt><img src="img/1.png"/></dt>
+					<dd>极速发货</dd>
+				</dl>
+				<dl class="dl">
+					<dt><img src="img/9.png"/></dt>
+					<dd>退换无忧</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="ba">
+			<div class="base">
+				<div class="qq">
+					<h4>关于我们</h4>
+					<p>
+						<img src="img/7.png" />
+						<img src="img/12.png" />
+						<img src="img/10.png" />
+					</p>
+				</div>
+				<div class="txt">
+					<ul>
+						<h4>关于美美箱</h4>
+						<li>美美全球</li>
+						<li>品牌优势</li>
+						<li>消费保障</li>
+					</ul>
+					<ul>
+						<h4>帮助中心</h4>
+						<li>常见问题</li>
+						<li>账户相关</li>
+						<li>包邮政策</li>
+						<li>支付相关</li>
+						<li>物流相关</li>
+						<li>退换政策</li>
+					</ul>
+					<ul>
+						<h4>服务协议</h4>
+						<li>服务协议</li>
+						<li>个人网申协议</li>
+						<li>隐私协议</li>
+					</ul>
+					<ul>
+						<h4>联系我们</h4>
+						<li>商务合作</li>
+						<li>分销合作</li>
+						<li>加入我们</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="phone_01">
+			<div class="phone">
+				<h4>联系客服</h4>
+				<p>客服时间 : 周一~周五(9:00 - 21:00) &nbsp;&nbsp;&nbsp;客服热线: 400-720-9967 &nbsp;&nbsp;&nbsp;客服邮箱 :kf@memeboxglobal.com</p>
+			</div>
+		</div>
+		<div class="tal_01">
+			<div class="tal">
+				<p><span>© 2015 Memebox Corporation. All Rights Reserved.</span> <span><img src="img/0 (1).gif" width="40px" height="40px"/> 蜜米柏克思（上海）商贸有限公司 上海市杨浦区政立路415号中航天盛广场A座6楼 沪ICP备14043341号</span> 营业执照</p>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/jquery-1.11.3.js"></script> 
+<script>
+	$('.sub').click(function(){
+		var str=document.cookie.split("; ");
+		console.log(str);
+		for(var i=0,len=str.length;i<len;i++){
+			var list=str[i].split("=");
+			if("name"==list[0]){
+				cookiename=list[1];
+			}else if("pwd"==list[0]){
+				cookiepwd=list[1]
+			}
+		}
+		var uname=$('#tet').val();
+		var upwd=$('#pass').val();
+		if(cookiename==uname&&cookiepwd==upwd){
+			alert("账号密码正确");
+			location.href="index.html";
+		}else{
+			alert("账号密码错误");
+		}
+	})
+</script>
